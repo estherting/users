@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Users Project</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('form').submit(function() {
+          var fname = $('#f_name').val();
+          var lname = $('#l_name').val();
+          var email = $('#email').val();
+          var contact = $('#contact').val();
+
+          var strToAppend = "<tr><td>" + fname + "</td><td>" + lname + "</td><td>" + email + "</td><td>" + contact + "</td></tr>"
+          $('.firstRow').after(strToAppend);
+          return false;
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr class="firstRow">
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th>Contact #</th>
+      </tr>
+    </table>
+
+    <h1>Add User</h1>
+    <form>
+      <label>
+        First Name:
+        <input id="f_name" type="text" name="f_name">
+      </label>
+      <label>
+        Last Name:
+        <input id="l_name" type="text" name="l_name">
+      </label>
+      <label>
+        Email Address:
+        <input id="email" type="text" name="email">
+      </label>
+      <label>
+        Contact No.:
+        <input id="contact" type="text" name="contact">
+      </label>
+      <button type="submit">Add User</botton>
+    </form>
+
+  </body>
+</html>

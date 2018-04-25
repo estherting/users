@@ -1,0 +1,17 @@
+table {
+  border: 2px solid black;
+}
+
+th {
+  padding-right: 30px;
+}
+
+h1 {
+  border-bottom: 2px solid black;
+  width: 350px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
